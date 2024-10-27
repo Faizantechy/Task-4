@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter New Input" />
+
+    <ul></ul>
+
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+
+    <script>
+      var inp = document.querySelector("input");
+      var ul = document.querySelector("ul");
+
+      var li = "";
+
+      var add = document
+        .querySelector(".add")
+        .addEventListener("click", function () {
+          if (inp.value.trim() === "") {
+          } else {
+            li = document.createElement("li");
+            li.textContent = inp.value;
+
+            ul.appendChild(li);
+
+            inp.value = "";
+          }
+        });
+
+      var remove = document
+        .querySelector(".remove")
+        .addEventListener(function () {
+          ul.removeChild(li);
+        });
+    </script>
+  </body>
+</html>
